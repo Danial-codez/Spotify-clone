@@ -75,6 +75,16 @@ async function main() {
     currentsong.currentTime = (currentsong.duration * percent) / 100;
   });
 
+// Card click to play song
+Array.from(document.querySelectorAll(".card")).forEach((card) => {
+  card.addEventListener("click", () => {
+    let song = card.dataset.song;
+    if (song) {
+      playmusic(song);
+    }
+  });
+});
+
   // Next and Previous buttons
   next.addEventListener("click", () => {
     let index = songs.indexOf(currentsong.src.split("/songs/")[1]);

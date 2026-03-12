@@ -38,6 +38,15 @@ body {
   gap: 15px;
   padding-top: 10px;
 }
+.songlist ul li{
+transition: transform 0.2s ease-in;
+  cursor: pointer;
+}
+
+.songlist ul li:hover
+{
+  transform: scale(1.07);
+}
 
 .library {
   min-height: 65vh;
@@ -75,6 +84,17 @@ body {
   align-items: center;
 }
 
+.arrow
+{
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.arrow:hover
+{
+  transform: scale(1.2);
+}
+
 .header > * {
   padding: 20px;
 }
@@ -86,7 +106,15 @@ body {
 .card h2 {
   font-size: medium;
 }
+.card {
+  transition: transform 0.2s ease-in;
+  cursor: pointer;
+}
 
+.card:hover {
+  transform: scale(1.07);
+  background-color: #212121;
+}
 .card-container {
   display: flex;
   gap: 10px;
@@ -120,21 +148,23 @@ body {
   margin: 0 12px;
 }
 .signupbtn {
-  background-color: #1f1f1f;
-  color: #656565;
+  background-color: #681515;
+  color: #949494;
   font-weight: bold;
   border: none;
   outline: none;
   font-size: 13px;
+  transition: transform 0.2s ease;
   cursor: pointer;
 }
 .signupbtn:hover {
   font-size: 14px;
   color: white;
+  transform: scale(1.1);
 }
 
 .loginbtn {
-    height: 40px;
+  height: 40px;
   background-color: white;
   font-weight: bold;
   border-radius: 30px;
@@ -144,12 +174,13 @@ body {
   outline: none;
   cursor: pointer;
   font-size: 16px;
-  
+  transition: transform 0.1s ease-in;
 }
 
+
 .loginbtn:hover {
-  font-size: 18px;
   font-weight: bold;
+  transform: scale(1.1);
 }
 
 .playbar {
@@ -158,7 +189,7 @@ body {
   width: 65%;
   height: 60px;
   box-sizing: border-box;
-  background-color:#054287;
+  background-color: #054287;
   padding: 12px;
   border-radius: 30px;
 }
@@ -197,43 +228,37 @@ body {
   width: 344px;
 }
 
-.seekbar
-{
-    height: 5px;
-    width: 96%;
-    position: absolute;
-    background-color: #1db954;
-    margin: 4px;
-    bottom: 4px;
-    
-    border-radius : 20px;
+.seekbar {
+  height: 5px;
+  width: 96%;
+  position: absolute;
+  background-color: #1db954;
+  margin: 4px;
+  bottom: 4px;
+
+  border-radius: 20px;
 }
 
-.circle
-{
-    position: relative;
-    bottom: 6px;
-    left: 0%;
-    height: 15px;
-    width: 15px;
-    border-radius: 13px;
-    background-color: black;
+.circle {
+  position: relative;
+  bottom: 6px;
+  left: 0%;
+  height: 15px;
+  width: 15px;
+  border-radius: 13px;
+  background-color: black;
 }
 
-.songbuttons img
-{
-    cursor: pointer;
+.songbuttons img {
+  cursor: pointer;
 }
 
-.songinfo, .songtime
-{
-    font-size: small;
-    
+.songinfo,
+.songtime {
+  font-size: small;
 }
 
-
-.whole
-{
-    display: flex;
-    justify-content: space-between;
+.whole {
+  display: flex;
+  justify-content: space-between;
 }
