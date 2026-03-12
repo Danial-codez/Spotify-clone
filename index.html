@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utility.css" />
+    <link rel="icon" href="spotify-title.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="left bg-black">
+        <div class="home rounded bg-grey p-1 m-1">
+          <div class="logo">
+            <img src="Logo.png" alt="logo" />
+          </div>
+          <div>
+            <ul>
+              <li><img class="invert" src="home.svg" alt="home" />Home</li>
+              <li>
+                <img class="invert" src="search.svg" alt="search" />Search
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="library rounded bg-grey p-1 m-1">
+          <div class="heading">
+            <img class="invert" src="playlist.png" alt="library" />
+            <h2>Your Library</h2>
+          </div>
+          <div class="songlist">
+            <ul></ul>
+          </div>
+          <div class="footer">
+            <div>
+              <a href="https://www.spotify.com/pk-en/legal/">
+                <span>Legal</span>
+              </a>
+            </div>
+
+            <div>
+              <a href="https://www.spotify.com/pk-en/safetyandprivacy/">
+                <span>Safety &amp; Privacy Center</span>
+              </a>
+            </div>
+
+            <div>
+              <a href="https://www.spotify.com/pk-en/legal/privacy-policy/">
+                <span>Privacy Policy</span>
+              </a>
+            </div>
+
+            <div>
+              <a href="https://www.spotify.com/pk-en/legal/cookies-policy/">
+                <span>Cookies</span>
+              </a>
+            </div>
+
+            <div>
+              <a href="https://www.spotify.com/pk-en/legal/privacy-policy/#s3">
+                <span>About Ads</span>
+              </a>
+            </div>
+
+            <div>
+              <a href="https://www.spotify.com/pk-en/accessibility/">
+                <span>Accessibility</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right bg-black">
+        <div class="header rounded bg-grey">
+          <div class="navbar">
+            <img class="invert" src="left.svg" alt="left-arrow" />
+            <img class="invert" src="right.svg" alt="right-arrow" />
+          </div>
+          <div class="buttons">
+            <button class="signupbtn">Sign Up</button>
+            <button class="loginbtn">Log in</button>
+          </div>
+        </div>
+        <div class="trending-songs bg-grey rounded p-1">
+          <h1>Trending Songs</h1>
+          <div class="card-container">
+            <div class="card">
+              <img class="play" src="play.svg" alt="play-button" />
+              <img src="tajdar.jpeg" alt="tajdar e haram" />
+              <h2>Tajdar e Haram Coke Studio Season 8</h2>
+              <p>Atif Aslam</p>
+            </div>
+
+            <div class="card">
+              <img class="play" src="play.svg" alt="play-button" />
+              <img src="kunfayakun.jpeg" alt="kunfayakun" />
+              <h2>Kun Faya Kun</h2>
+              <p>A.R Rehman,Javed Ali</p>
+            </div>
+
+            <div class="card">
+              <img class="play" src="play.svg" alt="play-button" />
+              <img src="tu kuja.jpeg" alt="tu kuja" />
+              <h2>Tu Kuja Man Kuja</h2>
+              <p>Rafaqat Ali Shah, Shiraz Uppal</p>
+            </div>
+
+            <div class="card">
+              <img class="play" src="play.svg" alt="play-button" />
+              <img src="lamyati.jpeg" alt="lamyati" />
+              <h2>Lamayati Nazeero</h2>
+              <p>Waseem Ahmed, Danish Ahmed</p>
+            </div>
+
+            <div class="card">
+              <img class="play" src="play.svg" alt="play-button" />
+              <img src="kardokaram.jpeg" alt="kardokaram" />
+              <h2>Kardokaram</h2>
+              <p>Nabeel Shoukat Ali</p>
+            </div>
+
+            <div class="card">
+              <img class="play" src="play.svg" alt="play-button" />
+              <img src="5-7.jpeg" alt="aujla" />
+              <h2>5-7</h2>
+              <p>Karan AUjla</p>
+            </div>
+
+            <div class="card">
+              <img class="play" src="play.svg" alt="play-button" />
+              <img src="regardless.png" alt="regardless" />
+              <h2>Regardless</h2>
+              <p>Asim Azhar</p>
+            </div>
+
+            <div class="card">
+              <img class="play" src="play.svg" alt="play-button" />
+              <img src="chhap-tilak.jpeg" alt="chhap tilak" />
+              <h2>Chhap Tilak</h2>
+              <p>Hadiqa Kiani</p>
+            </div>
+
+            <div class="card">
+              <img class="play" src="play.svg" alt="play-button" />
+              <img src="sajni.jpeg" alt="sajni" />
+              <h2>Sajni</h2>
+              <p>Strings</p>
+            </div>
+
+            <div class="card">
+              <img class="play" src="play.svg" alt="play-button" />
+              <img src="safar.jpeg" alt="safar" />
+              <h2>Safar</h2>
+              <p>Bayaan</p>
+            </div>
+          </div>
+        </div>
+        <div class="playbar">
+          <div class="seekbar">
+            <div class="circle"></div>
+          </div>
+          <div class="whole">
+            <div class="songinfo"></div>
+
+            <div class="songbuttons invert">
+              <img id="prev" src="previous.svg" alt="" />
+              <img id="pause" src="playbarplay.svg" alt="" />
+              <img id="next" src="next.svg" alt="" />
+            </div>
+            <div class="songtime"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: black;
+  color: white;
+}
+
+.logo img {
+  filter: invert(1);
+  width: 8vw;
+}
+.left {
+  width: 25vw;
+  border: 2px solid black;
+  padding: 3px;
+}
+
+.right {
+  width: 75vw;
+  border: 2px solid black;
+  position: relative;
+}
+
+.container {
+  display: flex;
+}
+
+.home ul li {
+  display: flex;
+  width: 23px;
+  list-style: none;
+  font-weight: 600;
+  gap: 15px;
+  padding-top: 10px;
+}
+
+.library {
+  min-height: 65vh;
+  position: relative;
+}
+.heading {
+  display: flex;
+  width: 200px;
+  list-style: none;
+  font-size: 12px;
+  gap: 15px;
+  padding-top: 10px;
+  align-items: center;
+}
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  font-size: 10px;
+
+  gap: 13px;
+}
+
+.footer a {
+  color: grey;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0px;
+  align-items: center;
+}
+
+.header > * {
+  padding: 20px;
+}
+
+.trending-songs h1 {
+  font-size: large;
+}
+
+.card h2 {
+  font-size: medium;
+}
+
+.card-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 15px 0px;
+  overflow-y: scroll;
+  max-height: 55vh;
+}
+.card {
+  width: 180px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #252525;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.card .play {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 135px;
+  right: 15px;
+}
+
+.buttons > * {
+  margin: 0 12px;
+}
+.signupbtn {
+  background-color: #1f1f1f;
+  color: #656565;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  cursor: pointer;
+}
+.signupbtn:hover {
+  font-size: 14px;
+  color: white;
+}
+
+.loginbtn {
+    height: 40px;
+  background-color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  width: 80px;
+  color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  
+}
+
+.loginbtn:hover {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.playbar {
+  position: fixed;
+  bottom: 10px;
+  width: 65%;
+  height: 60px;
+  box-sizing: border-box;
+  background-color:#054287;
+  padding: 12px;
+  border-radius: 30px;
+}
+
+.songbuttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.songlist ul li {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid white;
+  padding: 12px 2px;
+  margin: 12px 0px;
+
+  border-radius: 10px;
+}
+
+.songlist {
+  height: 48vh;
+  overflow: auto;
+  margin: 20px 0px 30px 0px;
+}
+
+.songlist ul {
+  padding: 0px 12px;
+}
+
+.songlist .info {
+  font-size: 13px;
+  width: 344px;
+}
+
+.seekbar
+{
+    height: 5px;
+    width: 96%;
+    position: absolute;
+    background-color: #1db954;
+    margin: 4px;
+    bottom: 4px;
+    
+    border-radius : 20px;
+}
+
+.circle
+{
+    position: relative;
+    bottom: 6px;
+    left: 0%;
+    height: 15px;
+    width: 15px;
+    border-radius: 13px;
+    background-color: black;
+}
+
+.songbuttons img
+{
+    cursor: pointer;
+}
+
+.songinfo, .songtime
+{
+    font-size: small;
+    
+}
+
+
+.whole
+{
+    display: flex;
+    justify-content: space-between;
+}

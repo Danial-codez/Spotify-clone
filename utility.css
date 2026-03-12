@@ -1,0 +1,59 @@
+.bg-black
+{
+    background-color: black;
+    color: white;
+}
+
+.invert
+{
+    filter: invert(1);
+}
+
+.bg-grey
+{
+    background-color: #1f1f1f;
+}
+
+.rounded
+{
+    border-radius: 6px;
+}
+
+.p-1
+{
+    padding: 20px;
+}
+.m-1
+{
+    margin: 5px;
+}
+
+
+/* ===== SCROLLBAR (CHROME, EDGE, SAFARI) ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #444444; /* very dark track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6d6d6d; /* dark thumb */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #737373; /* lighter on hover */
+}
+
+/* ===== SCROLLBAR (FIREFOX) ===== */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1c1c1c #474747;
+}
+
+/* ===== OPTIONAL SMOOTH SCROLL ===== */
+    html {
+    scroll-behavior: smooth;
+    }
