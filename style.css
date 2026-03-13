@@ -113,7 +113,7 @@ transition: transform 0.2s ease-in;
 
 .card:hover {
   transform: scale(1.07);
-  background-color: #212121;
+  background-color: #1a2535;
 }
 .card-container {
   display: flex;
@@ -127,7 +127,7 @@ transition: transform 0.2s ease-in;
   width: 180px;
   padding: 10px;
   border-radius: 5px;
-  background-color: #252525;
+  background-color: #111827;
   position: relative;
 }
 
@@ -186,10 +186,10 @@ transition: transform 0.2s ease-in;
 .playbar {
   position: fixed;
   bottom: 10px;
-  width: 65%;
+  width: 70%;
   height: 60px;
   box-sizing: border-box;
-  background-color: #054287;
+  background-color: #681515;
   padding: 12px;
   border-radius: 30px;
 }
@@ -261,4 +261,81 @@ transition: transform 0.2s ease-in;
 .whole {
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .right {
+    width: 100vw;
+  }
+
+  .card-container {
+    max-height: 70vh;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  .playbar {
+    width: 90%;
+    left: 50%;
+    background-color: rgb(103, 54, 189);
+    transform: translateX(-50%);
+    bottom: 10px;
+    height: 50px;        /* smaller height */
+    padding: 8px 12px;   /* less padding */
+    border-radius: 20px;
+  }
+
+  .seekbar {
+    height: 3px;         /* thinner seekbar */
+    width: 90%;
+    bottom: 3px;
+  }
+
+  .circle {
+    height: 10px;        /* smaller circle */
+    width: 10px;
+    bottom: 4px;
+  }
+
+  .songbuttons img {
+    width: 18px;         /* smaller buttons */
+    height: 18px;
+  }
+
+  .songinfo {
+    font-size: 9px;      /* smaller text */
+    width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;  /* adds ... if text too long */
+  }
+
+  .songtime {
+    font-size: 9px;
+  }
+
+  .whole {
+    align-items: center;
+  }
+
+  .logo img {
+    width: 20vw;
+  }
+
+  .header {
+    padding: 10px;
+  }
+
+  .trending-songs {
+    padding: 10px;
+  }
 }
