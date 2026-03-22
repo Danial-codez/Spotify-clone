@@ -11,12 +11,13 @@ function formatTime(seconds) {
 let currentsong = new Audio();
 
 const playmusic = (track, showpause = false) => {
-  currentsong.src = "/songs/" + track;
+  currentsong.src = "/songs/" + track;  // track must include .mp3
   if (!showpause) {
     currentsong.play();
     pause.src = "pause.svg";
   }
-  document.querySelector(".songinfo").innerHTML = decodeURI(track);
+  document.querySelector(".songinfo").innerHTML = 
+  `<span>${decodeURI(track).replace(".mp3", "")}</span>`;
   document.querySelector(".songtime").innerHTML = "00:00 / 00:00";
 };
 
@@ -32,25 +33,29 @@ async function main() {
 
   let songUL = document.querySelector(".songlist").getElementsByTagName("ul")[0];
 
+  // render sidebar songs
   for (const song of songs) {
-    songUL.innerHTML += `<li>
+    let displayName = song.replace(".mp3", "").replaceAll("%20", " ");
+    songUL.innerHTML += `<li data-song="${song}">
       <img class="invert" src="music.svg" alt="music">
       <div class="info">
-        <div>${song.replaceAll("%20", " ")}</div>
+        <div>${displayName}</div>
         <div>Artist</div>
       </div>
       <img class="invert" src="playbarplay.svg" alt="">
     </li>`;
   }
 
+  // sidebar click
   Array.from(
     document.querySelector(".songlist").getElementsByTagName("li")
   ).forEach((e) => {
     e.addEventListener("click", () => {
-      playmusic(e.querySelector(".info").firstElementChild.innerHTML.trim());
+      playmusic(e.dataset.song);
     });
   });
 
+  // play/pause
   pause.addEventListener("click", () => {
     if (currentsong.paused) {
       currentsong.play();
@@ -61,6 +66,7 @@ async function main() {
     }
   });
 
+  // time update
   currentsong.addEventListener("timeupdate", () => {
     document.querySelector(".songtime").innerHTML =
       `${formatTime(currentsong.currentTime)} / ${formatTime(currentsong.duration)}`;
@@ -68,24 +74,25 @@ async function main() {
       (currentsong.currentTime / currentsong.duration) * 100 + "%";
   });
 
-  // Click on seekbar to seek
+  // seekbar click
   document.querySelector(".seekbar").addEventListener("click", (e) => {
     let percent = (e.offsetX / e.target.getBoundingClientRect().width) * 100;
     document.querySelector(".circle").style.left = percent + "%";
     currentsong.currentTime = (currentsong.duration * percent) / 100;
   });
 
-// Card click to play song
-Array.from(document.querySelectorAll(".card")).forEach((card) => {
-  card.addEventListener("click", () => {
-    let song = card.dataset.song;
+  // card click
+ Array.from(document.querySelectorAll(".card")).forEach((card) => {
+  card.addEventListener("click", (e) => {
+    let clickedCard = e.target.closest(".card");
+    let song = clickedCard.dataset.song;
+    console.log("playing:", song); // check this
     if (song) {
       playmusic(song);
     }
   });
 });
-
-  // Next and Previous buttons
+  // next
   next.addEventListener("click", () => {
     let index = songs.indexOf(currentsong.src.split("/songs/")[1]);
     if (index + 1 < songs.length) {
@@ -93,6 +100,7 @@ Array.from(document.querySelectorAll(".card")).forEach((card) => {
     }
   });
 
+  // prev
   prev.addEventListener("click", () => {
     let index = songs.indexOf(currentsong.src.split("/songs/")[1]);
     if (index - 1 >= 0) {

@@ -38,13 +38,12 @@ body {
   gap: 15px;
   padding-top: 10px;
 }
-.songlist ul li{
-transition: transform 0.2s ease-in;
+.songlist ul li {
+  transition: transform 0.2s ease-in;
   cursor: pointer;
 }
 
-.songlist ul li:hover
-{
+.songlist ul li:hover {
   transform: scale(1.07);
 }
 
@@ -84,14 +83,12 @@ transition: transform 0.2s ease-in;
   align-items: center;
 }
 
-.arrow
-{
+.arrow {
   transition: transform 0.2s ease;
   cursor: pointer;
 }
 
-.arrow:hover
-{
+.arrow:hover {
   transform: scale(1.2);
 }
 
@@ -177,7 +174,6 @@ transition: transform 0.2s ease-in;
   transition: transform 0.1s ease-in;
 }
 
-
 .loginbtn:hover {
   font-weight: bold;
   transform: scale(1.1);
@@ -186,10 +182,10 @@ transition: transform 0.2s ease-in;
 .playbar {
   position: fixed;
   bottom: 10px;
-  width: 70%;
+  width: 74%;
   height: 60px;
   box-sizing: border-box;
-  background-color: #681515;
+  background-color: rgb(103, 54, 189)    ;
   padding: 12px;
   border-radius: 30px;
 }
@@ -253,6 +249,26 @@ transition: transform 0.2s ease-in;
   cursor: pointer;
 }
 
+.songinfo {
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.songinfo span {
+  display: inline-block;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 .songinfo,
 .songtime {
   font-size: small;
@@ -282,7 +298,6 @@ transition: transform 0.2s ease-in;
     align-items: center;
     padding-bottom: 20px;
   }
-  
 
   .playbar {
     width: 90%;
@@ -290,42 +305,39 @@ transition: transform 0.2s ease-in;
     background-color: rgb(103, 54, 189);
     transform: translateX(-50%);
     bottom: 10px;
-    height: 50px;        /* smaller height */
-    padding: 8px 12px;   /* less padding */
+    height: 50px; /* smaller height */
+    padding: 8px 12px; /* less padding */
     border-radius: 20px;
   }
 
   .seekbar {
-    height: 3px;         /* thinner seekbar */
+    height: 3px; /* thinner seekbar */
     width: 90%;
     bottom: 3px;
   }
 
   .circle {
-    height: 10px;        /* smaller circle */
+    height: 10px; /* smaller circle */
     width: 10px;
     bottom: 4px;
   }
 
   .songbuttons img {
-    width: 18px;         /* smaller buttons */
+    width: 18px; /* smaller buttons */
     height: 18px;
   }
 
   .songinfo {
-    font-size: 9px;      /* smaller text */
+    font-size: 9px; /* smaller text */
+    width: 80px;
     width: 80px;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;  /* adds ... if text too long */
+    text-overflow: ellipsis; /* adds ... if text too long */
   }
 
   .songtime {
     font-size: 9px;
-  }
-
-  .whole {
-    align-items: center;
   }
 
   .logo img {
