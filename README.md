@@ -1,4 +1,4 @@
-# 🎧 Spotify Clone
+# 🎧 My Own Music Player
 
 ![GitHub stars](https://img.shields.io/github/stars/your-username/spotify-clone?style=social) 
 ![GitHub forks](https://img.shields.io/github/forks/your-username/spotify-clone?style=social) 
