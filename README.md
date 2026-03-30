@@ -25,4 +25,4 @@ A **Spotify-inspired web app** built with **HTML, CSS & JavaScript**. Recreates 
 ## 💻 Installation
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/your-username/spotify-clone.git
+   git clone https://github.com/Danial-codez/spotify-clone.git
